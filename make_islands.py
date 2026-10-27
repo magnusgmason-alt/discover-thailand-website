@@ -187,9 +187,9 @@ PICKER_JS = """
 
 
 CTA = """<div class="isl-cta">
-      <p class="eyebrow">Discover Thailand · Islands Edition</p>
-      <h2>Every island, in one book.</h2>
-      <p>The Islands Edition covers the Andaman and Gulf islands in depth, with ferry routes, beach maps and which coast to pick in each month. Leave your email and we will tell you the day it launches.</p>
+      <p class="eyebrow">Discover Thailand · The Complete Travel Guide</p>
+      <h2>Every island, in one guide.</h2>
+      <p>The complete travel guide covers the Andaman and Gulf islands alongside the rest of the country, with ferry routes, maps and which coast to pick in each month. Leave your email and we will tell you the day it launches.</p>
       <a class="btn primary" href="/#checklist">Notify me at launch</a>
     </div>"""
 

@@ -20,7 +20,7 @@ The homepage island picker and the guides at `/islands/<slug>` are built from `i
 The three articles in `/blog` are built from `articles_content.py` by `make_articles.py`.
 
 ## Book covers
-Add the final covers to `photos/` as `cover-guide.jpg`, `cover-islands.jpg`, `cover-bangkok.jpg` and `cover-food.jpg` (or .png). Until then the build makes a simple placeholder cover for each book.
+Add the final covers to `photos/` as `cover-guide.jpg`, `cover-bangkok.jpg` and `cover-nomad.jpg` (or .png). Until then the build makes a simple placeholder cover for each book.
 
 ## Sign-up form
 Set `data-endpoint` on `<form id="signup">` in `index.html` to your form service URL. Until then the form does not collect addresses.

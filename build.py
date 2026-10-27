@@ -55,13 +55,12 @@ SLOTS = {
     "hl-longtails": 797868,
 }
 
-# Book covers: add photos/cover-guide.jpg, cover-islands.jpg, cover-bangkok.jpg and
-# cover-food.jpg (or .png) to replace the placeholders.
+# Book covers: add photos/cover-guide.jpg, cover-bangkok.jpg and cover-nomad.jpg
+# (or .png) to replace the placeholders.
 COVERS = {
     "cover-guide": "THE COMPLETE TRAVEL GUIDE",
-    "cover-islands": "ISLANDS EDITION",
     "cover-bangkok": "BANGKOK EDITION",
-    "cover-food": "STREET FOOD",
+    "cover-nomad": "EXPAT & DIGITAL NOMAD",
 }
 
 PAGE_FILES = ["index.html", "highlights.html", "robots.txt", "sitemap.xml"]

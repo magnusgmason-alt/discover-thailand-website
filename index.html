@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Discover Thailand · The Complete Thailand Travel Guide</title>
+<link rel="canonical" href="__SITE__/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Discover Thailand">
+<meta property="og:title" content="Discover Thailand · The Complete Thailand Travel Guide">
+<meta property="og:description" content="The complete travel guide to Thailand: regions, routes, maps and planning, with islands, Bangkok and street food editions.">
+<meta property="og:url" content="__SITE__/">
+<meta property="og:image" content="__SITE__/assets/img/hero-longtail-1800.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Discover Thailand: the complete travel guide to Thailand, with islands, Bangkok and street food editions.">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
+<style>
+/* Discover Thailand — styles
+   Editorial, dark "basalt night" palette. Photos dissolve into the page
+   with gradient masks instead of hard edges. Change the tokens here. */
+:root {
+  --night: #0a1116;
+  --night-2: #0f1a21;
+  --night-3: #142630;
+  --frost: #e8eef1;
+  --mist: rgba(232, 238, 241, 0.72);
+  --line: rgba(232, 238, 241, 0.14);
+  --ink: #0e1317;
+  --paper: #f5f3ee;
+  --stone: #e9e5dc;
+  --muted: #5a646b;
+  --red: #d9483b;
+  --red-dark: #b8372c;
+  --glacier: #9fd4e2;
+  --white: #fff;
+  --teal: #0c2a30;
+  --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --radius: 4px;
+  --header-h: 72px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--header-h); -webkit-text-size-adjust: 100%; }
+body { margin: 0; font-family: var(--sans); color: var(--frost); background: var(--night); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+img { display: block; max-width: 100%; height: auto; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; line-height: 1.06; letter-spacing: -0.02em; }
+p { margin: 0 0 1em; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.container.narrow, .narrow { max-width: 760px; }
+.center { text-align: center; }
+.center.narrow { margin-left: auto; margin-right: auto; }
+
+/* Type */
+.eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--glacier); margin-bottom: 18px; }
+.eyebrow.light { color: var(--glacier); }
+h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.1rem, 4.8vw, 3.6rem); margin-bottom: 22px; letter-spacing: -0.01em; }
+h3 { font-size: 1.5rem; font-weight: 800; }
+.lead { font-size: clamp(1.02rem, 1.4vw, 1.16rem); color: var(--mist); max-width: 60ch; }
+.center .lead, .lead.center { margin-left: auto; margin-right: auto; }
+.on-photo .lead { color: rgba(255, 255, 255, 0.88); }
+.fine { font-size: 0.85rem; color: var(--mist); margin-top: 14px; }
+.fine.light { color: rgba(255, 255, 255, 0.75); }
+.link-arrow { display: inline-block; margin-top: 8px; font-weight: 700; font-size: 0.9rem; letter-spacing: 0.02em; text-decoration: none; border-bottom: 2px solid var(--red); padding-bottom: 3px; }
+.link-arrow.dark { color: var(--white); border-color: var(--red); }
+
+/* Buttons */
+.btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn-row.center-row { justify-content: center; }
+.btn { display: inline-block; padding: 14px 26px; border-radius: 2px; font: 700 0.78rem var(--sans); letter-spacing: 0.16em; text-transform: uppercase; text-decoration: none; border: 1px solid transparent; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.btn.primary { background: var(--frost); color: var(--night); }
+.btn.primary:hover { background: var(--white); }
+.btn.ghost { border-color: rgba(255, 255, 255, 0.6); color: var(--white); }
+.btn.ghost:hover { background: var(--white); color: var(--night); }
+.btn.outline { border-color: rgba(232, 238, 241, 0.5); color: var(--frost); }
+.btn.outline:hover { background: var(--frost); color: var(--night); }
+:focus-visible { outline: 3px solid var(--glacier); outline-offset: 3px; }
+
+/* Header */
+.site-header { position: fixed; inset: 0 0 auto 0; z-index: 50; height: var(--header-h); display: flex; align-items: center; color: var(--white); transition: background 0.25s, box-shadow 0.25s; }
+.site-header.solid { background: rgba(10, 17, 22, 0.9); backdrop-filter: blur(10px); box-shadow: 0 1px 0 var(--line); }
+.header-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+.logo { text-decoration: none; font-weight: 500; font-size: 1.15rem; letter-spacing: -0.03em; white-space: nowrap; }
+.logo b { font-weight: 800; }
+.logo i { font-style: normal; color: var(--red); font-weight: 800; }
+.nav { display: flex; align-items: center; gap: 20px; font-size: 0.7rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+.nav > a, .dropdown-btn { white-space: nowrap; }
+.nav > a { text-decoration: none; opacity: 0.9; }
+.nav > a:hover { opacity: 1; text-decoration: underline; text-underline-offset: 6px; }
+.dropdown { position: relative; }
+.dropdown-btn { background: none; border: 0; color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; cursor: pointer; padding: 6px 0; opacity: 0.9; }
+.dropdown-menu { position: absolute; top: 100%; left: -14px; min-width: 210px; background: var(--night-2); border: 1px solid var(--line); border-radius: var(--radius); padding: 8px 0; display: none; box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5); text-transform: none; letter-spacing: 0.02em; font-size: 0.85rem; }
+.dropdown.open .dropdown-menu, .dropdown:hover .dropdown-menu { display: block; }
+.dropdown.lang .dropdown-menu { left: auto; right: -10px; }
+.dropdown-menu a, .dropdown-menu .soon { display: block; padding: 9px 18px; text-decoration: none; font-weight: 500; }
+.dropdown-menu a:hover { background: rgba(255, 255, 255, 0.08); }
+.dropdown-menu .soon { opacity: 0.45; cursor: default; }
+.nav-toggle { display: none; background: none; border: 0; width: 44px; height: 44px; cursor: pointer; position: relative; }
+.nav-toggle span { position: absolute; left: 10px; right: 10px; height: 2px; background: var(--white); transition: transform 0.2s, top 0.2s; }
+.nav-toggle span:first-child { top: 17px; }
+.nav-toggle span:last-child { top: 25px; }
+.nav-toggle[aria-expanded="true"] span:first-child { top: 21px; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"] span:last-child { top: 21px; transform: rotate(-45deg); }
+
+/* Hero: the photo dissolves into the page at the bottom */
+.hero { position: relative; min-height: 100svh; display: flex; align-items: flex-end; color: var(--white); overflow: hidden; background: var(--night); }
+.bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero .bg { object-position: 50% 45%; }
+.shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 17, 22, 0.55) 0%, rgba(10, 17, 22, 0.05) 30%, rgba(10, 17, 22, 0.15) 60%, var(--night) 100%); }
+.shade.heavy { background: linear-gradient(180deg, var(--night) 0%, rgba(10, 17, 22, 0.45) 22%, rgba(10, 17, 22, 0.5) 78%, var(--night) 100%); }
+.shade.soft { background: linear-gradient(180deg, var(--night) 0%, rgba(10, 17, 22, 0.2) 22%, rgba(10, 17, 22, 0.3) 78%, var(--night) 100%); }
+.hero-inner { position: relative; padding-top: calc(var(--header-h) + 40px); padding-bottom: clamp(90px, 14vh, 150px); }
+.hero h1 { font-size: clamp(3rem, 11vw, 8.6rem); font-weight: 500; letter-spacing: -0.055em; line-height: 0.92; }
+.hero h1 b { font-weight: 800; }
+.hero h1 i { font-style: normal; color: var(--red); }
+.hero .rule { display: block; width: 72px; height: 3px; background: var(--red); margin: 30px 0 22px; }
+.hero-sub { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(1.35rem, 3vw, 2.1rem); margin-bottom: 12px; }
+.hero-regions { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.85; }
+.scroll-cue { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); color: var(--white); text-decoration: none; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; opacity: 0.7; }
+.scroll-cue::after { content: ""; display: block; width: 1px; height: 34px; background: linear-gradient(currentColor, transparent); margin: 10px auto 0; }
+
+/* Strip: a photo band that melts away at the bottom */
+.strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 62%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 62%, transparent 100%); }
+.strip img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+
+/* Sections */
+.section { padding: clamp(72px, 10vw, 130px) 0; }
+.section.light, .section.stone { background: var(--night); }
+.section.deep { background: linear-gradient(180deg, var(--night) 0%, var(--night-2) 18%, var(--night-2) 82%, var(--night) 100%); }
+.photo-section { position: relative; padding: clamp(110px, 14vw, 190px) 0; color: var(--white); overflow: hidden; background: var(--night); }
+.photo-section.tall { padding: clamp(150px, 20vw, 260px) 0; }
+.photo-section .bg { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 20%, #000 80%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 20%, #000 80%, transparent 100%); }
+.on-photo { position: relative; }
+.split { display: grid; grid-template-columns: 1.05fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+.split-light { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+
+/* Feature: the photo fills one side and dissolves sideways into the page */
+.feature { position: relative; overflow: hidden; background: var(--night); padding: clamp(90px, 12vw, 160px) 0; min-height: min(92svh, 820px); display: flex; align-items: center; }
+.feature-media { position: absolute; top: 0; bottom: 0; left: 0; width: 64%; }
+.feature-media img { width: 100%; height: 100%; object-fit: cover; -webkit-mask-image: linear-gradient(90deg, #000 0%, #000 45%, transparent 100%), linear-gradient(180deg, transparent 0, #000 14%, #000 86%, transparent 100%); -webkit-mask-composite: source-in; mask-image: linear-gradient(90deg, #000 0%, #000 45%, transparent 100%), linear-gradient(180deg, transparent 0, #000 14%, #000 86%, transparent 100%); mask-composite: intersect; }
+.feature.reverse .feature-media { left: auto; right: 0; }
+.feature.reverse .feature-media img { -webkit-mask-image: linear-gradient(270deg, #000 0%, #000 45%, transparent 100%), linear-gradient(180deg, transparent 0, #000 14%, #000 86%, transparent 100%); mask-image: linear-gradient(270deg, #000 0%, #000 45%, transparent 100%), linear-gradient(180deg, transparent 0, #000 14%, #000 86%, transparent 100%); }
+.feature-body { position: relative; width: 100%; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+.feature-text { grid-column: 2; }
+.feature.reverse .feature-text { grid-column: 1; }
+.feature-text h2 { text-shadow: 0 2px 30px rgba(10, 17, 22, 0.6); }
+.feature .spots { margin-top: 30px; }
+
+/* Intro (about) */
+.intro { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
+.intro h2 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); line-height: 1.02; margin: 0; }
+.intro .lead { max-width: none; }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: clamp(56px, 7vw, 88px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.stats > div { padding: 32px 28px 30px 0; }
+.stats > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
+.stats strong { display: block; font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; letter-spacing: -0.02em; color: var(--white); line-height: 1; }
+.stats span { display: block; margin-top: 12px; color: var(--mist); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.5; }
+
+/* Spots & features */
+.spots { list-style: none; margin: 0; padding: 0; display: grid; border-top: 1px solid rgba(255, 255, 255, 0.22); }
+.spots li { position: relative; padding: 17px 0 17px 26px; border-bottom: 1px solid rgba(255, 255, 255, 0.22); }
+.spots li::before { content: ""; position: absolute; left: 0; top: 1.7em; width: 12px; height: 2px; background: var(--red); }
+.spots strong { display: block; font-size: 1.02rem; }
+.spots span { font-size: 0.9rem; opacity: 0.82; }
+.features { list-style: none; margin: 22px 0 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 24px; }
+.features li { position: relative; padding-left: 22px; font-weight: 600; font-size: 0.95rem; }
+.features li::before { content: ""; position: absolute; left: 0; top: 0.65em; width: 10px; height: 2px; background: var(--red); }
+
+/* Book feature */
+.book-feature { display: grid; grid-template-columns: 340px 1fr; gap: clamp(32px, 6vw, 88px); align-items: center; }
+.book-feature.reverse { grid-template-columns: 1fr 340px; }
+.book-feature.reverse .cover { order: 2; }
+.book-feature + .book-feature { margin-top: clamp(72px, 10vw, 120px); padding-top: clamp(72px, 10vw, 120px); border-top: 1px solid var(--line); }
+.cover { display: block; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6); border-radius: 2px; overflow: hidden; transition: transform 0.3s; }
+.cover:hover { transform: translateY(-4px); }
+.cover img { width: 100%; }
+.book-feature h3 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
+.book-feature h3 small { display: block; font-family: var(--sans); font-weight: 700; font-size: 0.34em; letter-spacing: 0.24em; text-transform: uppercase; margin-top: 12px; color: var(--glacier); }
+.subtitle { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--mist); margin-top: 12px; }
+
+/* Journal */
+.journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 52px; }
+@media (max-width: 900px) { .journal-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .journal-grid { grid-template-columns: 1fr; } }
+.journal-card { background: transparent; display: flex; flex-direction: column; }
+.journal-card img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, #000 70%, transparent 100%); }
+.journal-card > div { padding: 0 2px 8px; margin-top: -28px; position: relative; }
+.journal-card h3 a { text-decoration: none; }
+.journal-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+.journal-card h3 { font-family: var(--serif); font-size: 1.35rem; line-height: 1.22; margin: 10px 0 10px; letter-spacing: 0; }
+.journal-card p { color: var(--mist); font-size: 0.92rem; margin-bottom: 12px; }
+.tags { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--glacier); }
+.soon-label { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mist); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
+
+/* Highlight cards */
+.card-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 52px; }
+.card { position: relative; display: block; border-radius: var(--radius); overflow: hidden; color: var(--white); text-decoration: none; aspect-ratio: 3 / 4; background: var(--night-2); }
+.card img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 0.8s; }
+.card:hover img { transform: scale(1.05); }
+.card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 17, 22, 0) 40%, rgba(10, 17, 22, 0.9)); }
+.card-tag { position: absolute; z-index: 1; top: 14px; left: 14px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 5px 10px; border-radius: 2px; background: rgba(10, 17, 22, 0.55); backdrop-filter: blur(6px); }
+.card-body { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 18px; }
+.card-body strong { display: block; font-family: var(--serif); font-size: 1.3rem; line-height: 1.15; }
+.card-body em { display: block; font-style: normal; font-size: 0.84rem; opacity: 0.85; margin-top: 6px; }
+
+/* Map */
+.map { width: 100%; max-width: 700px; height: auto; margin: 36px auto 0; display: block; }
+.map .range { fill: rgba(159, 212, 226, 0.06); stroke: var(--glacier); stroke-width: 1.5; stroke-dasharray: 2 6; stroke-linecap: round; }
+.map .route path { fill: none; stroke: rgba(232, 238, 241, 0.35); stroke-width: 2; }
+.map .pin circle { fill: var(--red); stroke: var(--night); stroke-width: 3; }
+.map .pin text { font: 700 14px var(--sans); fill: var(--frost); }
+
+/* Books */
+.book-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); margin-top: 56px; text-align: center; }
+.book .series { margin: 24px 0 6px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacier); }
+.book h3 { font-family: var(--serif); font-size: 1.4rem; }
+.book .subtitle { margin: 8px 0 14px; font-size: 1.05rem; }
+
+/* Guides section: deep teal with a faint photo that fades at both ends */
+.section.guides { position: relative; overflow: hidden; background: var(--night); color: var(--white); }
+.guides-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%; opacity: 0.3; }
+.guides-fade { position: absolute; inset: 0; background: linear-gradient(180deg, var(--night) 0%, rgba(12, 42, 48, 0.6) 30%, rgba(12, 42, 48, 0.7) 70%, var(--night) 100%); }
+.guides .container { position: relative; }
+.guides .lead { color: rgba(255, 255, 255, 0.85); }
+.guides .book .subtitle { color: rgba(255, 255, 255, 0.72); }
+
+/* Checklist */
+.signup { display: flex; gap: 10px; max-width: 520px; margin: 30px auto 0; }
+.signup input { flex: 1; min-width: 0; padding: 14px 20px; border-radius: 2px; border: 1px solid rgba(255, 255, 255, 0.4); background: rgba(10, 17, 22, 0.45); color: var(--white); font: 500 1rem var(--sans); }
+.signup input::placeholder { color: rgba(255, 255, 255, 0.6); }
+.form-msg { min-height: 1.5em; margin: 14px 0 0; font-weight: 600; }
+.check-items { list-style: none; margin: 34px auto 0; padding: 0; max-width: 640px; display: grid; grid-template-columns: 1fr 1fr; gap: 10px 28px; text-align: left; font-size: 0.95rem; font-weight: 500; }
+.check-items li { position: relative; padding-left: 26px; }
+.check-items li::before { content: "✓"; position: absolute; left: 0; color: var(--glacier); font-weight: 800; }
+
+/* Series band + footer */
+.band { background: var(--night-2); color: var(--white); padding: 34px 0; border-top: 1px solid var(--line); }
+.band-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px 32px; }
+.band p { margin: 0; opacity: 0.9; }
+.site-footer { background: #070c10; color: rgba(255, 255, 255, 0.75); padding: 56px 0 40px; font-size: 0.86rem; }
+.footer-inner { display: grid; gap: 22px; }
+.site-footer .logo { color: var(--white); font-size: 1.3rem; }
+.site-footer nav { display: flex; flex-wrap: wrap; gap: 10px 26px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.72rem; }
+.site-footer nav a { text-decoration: none; }
+.site-footer nav a:hover { color: var(--white); text-decoration: underline; }
+.site-footer p { margin: 0; opacity: 0.65; }
+
+/* Reveal on scroll */
+.reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.8s, transform 0.8s; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .card img, .cover, .btn { transition: none; }
+}
+
+/* Tablet */
+@media (max-width: 1000px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+  .split, .split-light, .intro { grid-template-columns: 1fr; }
+  .book-grid { grid-template-columns: repeat(2, minmax(0, 300px)); justify-content: center; }
+}
+
+/* Mobile nav */
+@media (max-width: 1240px) {
+  .nav-toggle { display: block; }
+  .nav { position: fixed; inset: var(--header-h) 0 auto 0; background: var(--night); flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 24px; max-height: calc(100svh - var(--header-h)); overflow-y: auto; display: none; font-size: 0.85rem; }
+  .nav.open { display: flex; }
+  .nav > a, .dropdown-btn { padding: 14px 0; border-bottom: 1px solid var(--line); width: 100%; text-align: left; }
+  .dropdown:hover .dropdown-menu { display: none; }
+  .dropdown.open .dropdown-menu { display: block; position: static; box-shadow: none; border: 0; background: transparent; padding: 0 0 0 14px; }
+  .site-header { background: rgba(10, 17, 22, 0.92); }
+}
+
+/* Phone: side-fading photos stack on top and fade downward */
+@media (max-width: 760px) {
+  .strip { grid-template-columns: 1fr 1fr; }
+  .stats { grid-template-columns: 1fr; }
+  .stats > div, .stats > div + div { padding: 24px 0; border-left: 0; }
+  .stats > div + div { border-top: 1px solid var(--line); }
+  .feature { display: block; min-height: 0; padding: 0 0 72px; }
+  .feature-media, .feature.reverse .feature-media { position: relative; width: 100%; height: 62svh; }
+  .feature-media img, .feature.reverse .feature-media img { -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, transparent 0, #000 12%, #000 55%, transparent 100%); }
+  .feature-body { grid-template-columns: 1fr; margin-top: -18svh; }
+  .feature-text, .feature.reverse .feature-text { grid-column: 1; }
+  .book-feature, .book-feature.reverse { grid-template-columns: 1fr; }
+  .book-feature .cover, .book-feature.reverse .cover { order: 0; max-width: 280px; margin: 0 auto; }
+  .features { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .card-body strong { font-size: 1.05rem; }
+  .card-body em { display: none; }
+  .book-grid { grid-template-columns: 1fr 1fr; gap: 28px 16px; }
+  .book .subtitle { font-size: 0.95rem; }
+  .signup { flex-direction: column; }
+  .check-items { grid-template-columns: 1fr; }
+  .hero-regions { letter-spacing: 0.12em; line-height: 1.9; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+  <div class="container header-inner">
+    <a class="logo" href="#top" aria-label="Discover Thailand, back to top">Discover<b>Thailand</b><i>.</i></a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu"><span></span><span></span></button>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#guides">All guides</a>
+      <div class="dropdown">
+        <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">Regions <span aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="#map">All regions</a>
+          <a href="#map">Bangkok</a>
+          <a href="#map">Central Plains</a>
+          <a href="#map">The North</a>
+          <a href="#map">Isan</a>
+          <a href="#map">Gulf Islands</a>
+          <a href="#map">Andaman Coast</a>
+        </div>
+      </div>
+      <a href="#guide">Travel guide</a>
+      <a href="/highlights">Highlights</a>
+      <a href="#fire">Islands</a>
+      <a href="#history">History</a>
+      <a href="#journal">Journal</a>
+      <a href="#seasons">Seasons</a>
+      <a href="#checklist">Free checklist</a>
+      <div class="dropdown lang">
+        <button class="dropdown-btn" aria-haspopup="true" aria-expanded="false">EN <span aria-hidden="true">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="#" aria-current="true">English</a>
+          <span class="soon">ไทย · soon</span>
+          <span class="soon">Deutsch · soon</span>
+          <span class="soon">Français · soon</span>
+          <span class="soon">Español · soon</span>
+          <span class="soon">中文 · soon</span>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img class="bg" src="assets/img/hero-longtail-1800.jpg" srcset="assets/img/hero-longtail-800.jpg 800w, assets/img/hero-longtail-1800.jpg 1800w" sizes="100vw" alt="A longtail boat on clear turquoise water below sheer limestone cliffs" width="1800" height="1192" style="object-position: 50% 55%" fetchpriority="high">
+    <div class="shade"></div>
+    <div class="container hero-inner">
+      <p class="eyebrow light">The Thailand travel guide</p>
+      <h1>Discover<br><b>Thailand</b><i>.</i></h1>
+      <span class="rule"></span>
+      <p class="hero-sub">Temples, islands and street food.</p>
+      <p class="hero-regions">Bangkok · Central Plains · The North · Isan · Gulf Islands · Andaman Coast</p>
+      <div class="btn-row">
+        <a class="btn primary" href="#guides">Explore the guides</a>
+        <a class="btn ghost" href="#editions">Islands &amp; cities</a>
+      </div>
+    </div>
+    <a class="scroll-cue" href="#about">Scroll</a>
+  </section>
+
+  <!-- IMAGE STRIP -->
+  <section class="strip" aria-label="Photos of Thailand">
+    <img src="assets/img/strip-wat-arun-1800.jpg" srcset="assets/img/strip-wat-arun-800.jpg 800w, assets/img/strip-wat-arun-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, 50vw" alt="The porcelain-covered spire of Wat Arun in Bangkok, with flowers in the foreground" width="1800" height="3200" loading="lazy" decoding="async">
+    <img src="assets/img/strip-tuk-tuks-1800.jpg" srcset="assets/img/strip-tuk-tuks-800.jpg 800w, assets/img/strip-tuk-tuks-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, 50vw" alt="Two green and yellow tuk-tuks parked in front of a temple's orange and white wall" width="1800" height="2700" loading="lazy" decoding="async">
+    <img src="assets/img/strip-lagoon-1800.jpg" srcset="assets/img/strip-lagoon-800.jpg 800w, assets/img/strip-lagoon-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, 50vw" alt="A turquoise lagoon between jungle-covered limestone walls, seen from above" width="1800" height="2250" loading="lazy" decoding="async">
+    <img src="assets/img/strip-maya-bay-1800.jpg" srcset="assets/img/strip-maya-bay-800.jpg 800w, assets/img/strip-maya-bay-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, 50vw" alt="A bay of turquoise water and white sand enclosed by green limestone cliffs" width="1800" height="1343" loading="lazy" decoding="async">
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section light" id="about">
+    <div class="container intro">
+      <div><p class="eyebrow">About the guide</p>
+      <h2>One kingdom.<br>Every corner.</h2></div>
+      <p class="lead">Thailand runs for more than 1,500 km from the hills of the Golden Triangle to the islands near Malaysia. Discover Thailand is a complete travel guide to the country: when to go, how to get around, where to stay, what to eat, what it costs, how to behave at temples, and which coast to choose in each season.</p>
+    </div>
+    <div class="container stats">
+      <div><strong>1238</strong><span>traditional founding date of the Sukhothai kingdom</span></div>
+      <div><strong>1782</strong><span>Bangkok becomes the capital of the Chakri dynasty</span></div>
+      <div><strong>1932</strong><span>year Siam became a constitutional monarchy</span></div>
+    </div>
+  </section>
+
+  <!-- THE SERIES -->
+  <section class="photo-section tall" id="editions">
+    <img class="bg" src="assets/img/editions-skyline-1800.jpg" srcset="assets/img/editions-skyline-800.jpg 800w, assets/img/editions-skyline-1800.jpg 1800w" sizes="100vw" alt="Bangkok's towers lit up at night above the busy streets" width="1800" height="2700" style="object-position: 50% 40%" loading="lazy" decoding="async">
+    <div class="shade heavy"></div>
+    <div class="container narrow center on-photo">
+      <p class="eyebrow light">The series</p>
+      <h2>One country. Two coasts.</h2>
+      <p class="lead">Thailand is a different trip in Bangkok and on the islands, and the Andaman and Gulf coasts have their rainy seasons at different times of year. The complete guide covers the whole country, and three companion books go deeper: an islands edition, a Bangkok edition and a guide to Thai street food.</p>
+      <div class="btn-row center-row">
+        <a class="btn primary" href="#guide">The complete guide</a>
+        <a class="btn ghost" href="#seasons">The companion editions</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE FEATURE -->
+  <section class="feature" id="guide">
+    <div class="feature-media">
+    <img src="assets/img/guide-wat-arun-river-1800.jpg" srcset="assets/img/guide-wat-arun-river-800.jpg 800w, assets/img/guide-wat-arun-river-1800.jpg 1800w" sizes="100vw" alt="Wat Arun seen from inside a riverboat on the Chao Phraya, with passengers in the foreground" width="1800" height="1200" style="object-position: 50% 50%" loading="lazy" decoding="async"></div>
+    <div class="container feature-body">
+      <div class="feature-text">
+        <p class="eyebrow light">The complete guide</p>
+        <h2>Temples, rivers and white sand.</h2>
+        <p class="lead">Mornings at the temples, afternoons on the river, evenings at a night market. The travel guide is built around regions, rail and ferry routes and easy day trips, with maps for each area.</p>
+        <a class="link-arrow" href="#map">See the regions on the map →</a>
+      <ul class="spots">
+        <li><strong>Bangkok</strong><span>Grand Palace, Wat Arun, the river and Chinatown.</span></li>
+        <li><strong>Ayutthaya &amp; the Central Plains</strong><span>The old royal capital, an easy day trip by train.</span></li>
+        <li><strong>Chiang Mai &amp; the North</strong><span>Old city temples, mountains and hill-country roads.</span></li>
+        <li><strong>The islands</strong><span>Phuket, Krabi and Phi Phi, or Samui, Phangan and Tao.</span></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- GUIDE CARD -->
+  <section class="section stone">
+    <div class="container book-feature">
+      <a class="cover" href="#guides"><img src="assets/img/cover-guide-900.jpg" srcset="assets/img/cover-guide-500.jpg 500w, assets/img/cover-guide-900.jpg 900w" sizes="(min-width: 900px) 360px, 80vw" alt="Cover of Discover Thailand, the complete travel guide" width="900" height="1350" loading="lazy" decoding="async"></a>
+      <div>
+        <p class="eyebrow">The complete guide · Coming soon</p>
+        <h3>Discover Thailand<small>The Complete Travel Guide</small></h3>
+        <p class="subtitle">Regions, routes &amp; maps</p>
+        <ul class="features"><li>Region by region</li><li>Train, flight &amp; ferry routes</li><li>Temples &amp; etiquette</li><li>Seasons, monsoons &amp; festivals</li></ul>
+        <div class="btn-row">
+          <a class="btn primary" href="#checklist">Notify me at launch</a>
+          <a class="btn outline" href="#seasons">See the companion editions</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section class="section light" id="highlights">
+    <div class="container">
+      <p class="eyebrow center">Start here</p>
+      <h2 class="center">Thailand highlights</h2>
+      <div class="card-grid">
+        <a class="card" href="/highlights#wat-arun"><img src="assets/img/hl-wat-arun-1800.jpg" srcset="assets/img/hl-wat-arun-800.jpg 800w, assets/img/hl-wat-arun-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="The central spire of Wat Arun, covered in coloured porcelain" width="1800" height="3200" loading="lazy" decoding="async"><span class="card-tag">Bangkok</span><span class="card-body"><strong>Wat Arun</strong><em>Porcelain spires on the river.</em></span></a>
+        <a class="card" href="/highlights#chao-phraya"><img src="assets/img/hl-chao-phraya-1800.jpg" srcset="assets/img/hl-chao-phraya-800.jpg 800w, assets/img/hl-chao-phraya-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Passengers on a long boat speeding along a river in Bangkok" width="1800" height="1200" loading="lazy" decoding="async"><span class="card-tag">Bangkok</span><span class="card-body"><strong>Chao Phraya River</strong><em>The city's main street is water.</em></span></a>
+        <a class="card" href="/highlights#tuk-tuks"><img src="assets/img/hl-tuk-tuks-1800.jpg" srcset="assets/img/hl-tuk-tuks-800.jpg 800w, assets/img/hl-tuk-tuks-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="A tuk-tuk parked on a sunny street with a temple behind" width="1800" height="2700" loading="lazy" decoding="async"><span class="card-tag">Bangkok</span><span class="card-body"><strong>Tuk-tuks</strong><em>Agree the fare before you get in.</em></span></a>
+        <a class="card" href="/highlights#skyline"><img src="assets/img/hl-skyline-1800.jpg" srcset="assets/img/hl-skyline-800.jpg 800w, assets/img/hl-skyline-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Bangkok's skyline at twilight with the King Power Mahanakhon tower" width="1800" height="2700" loading="lazy" decoding="async"><span class="card-tag">Bangkok</span><span class="card-body"><strong>The skyline</strong><em>Rooftop views at sunset.</em></span></a>
+        <a class="card" href="/highlights#erawan"><img src="assets/img/hl-erawan-1800.jpg" srcset="assets/img/hl-erawan-800.jpg 800w, assets/img/hl-erawan-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Water flowing over rocky steps into turquoise pools in a green forest" width="1800" height="1200" loading="lazy" decoding="async"><span class="card-tag">Kanchanaburi</span><span class="card-body"><strong>Erawan Falls</strong><em>Seven tiers of turquoise pools.</em></span></a>
+        <a class="card" href="/highlights#phang-nga"><img src="assets/img/hl-phang-nga-1800.jpg" srcset="assets/img/hl-phang-nga-800.jpg 800w, assets/img/hl-phang-nga-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Limestone islands across Phang Nga Bay seen over grassland" width="1800" height="1200" loading="lazy" decoding="async"><span class="card-tag">Phang Nga</span><span class="card-body"><strong>Phang Nga Bay</strong><em>Limestone towers rising from the sea.</em></span></a>
+        <a class="card" href="/highlights#phi-phi"><img src="assets/img/hl-phi-phi-1800.jpg" srcset="assets/img/hl-phi-phi-800.jpg 800w, assets/img/hl-phi-phi-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Boats moored in a turquoise bay below green hills, seen from above" width="1800" height="1200" loading="lazy" decoding="async"><span class="card-tag">Krabi</span><span class="card-body"><strong>Koh Phi Phi</strong><em>Twin bays joined by a sandy isthmus.</em></span></a>
+        <a class="card" href="/highlights#maya-bay"><img src="assets/img/hl-maya-bay-1800.jpg" srcset="assets/img/hl-maya-bay-800.jpg 800w, assets/img/hl-maya-bay-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Maya Bay's white sand and turquoise water below tall cliffs" width="1800" height="2400" loading="lazy" decoding="async"><span class="card-tag">Phi Phi Leh</span><span class="card-body"><strong>Maya Bay</strong><em>The bay from The Beach, now protected.</em></span></a>
+        <a class="card" href="/highlights#pileh-lagoon"><img src="assets/img/hl-pileh-1800.jpg" srcset="assets/img/hl-pileh-800.jpg 800w, assets/img/hl-pileh-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="A longtail boat floating in a green lagoon between cliffs" width="1800" height="2169" loading="lazy" decoding="async"><span class="card-tag">Phi Phi Leh</span><span class="card-body"><strong>Pileh Lagoon</strong><em>Emerald water inside sheer walls.</em></span></a>
+        <a class="card" href="/highlights#ao-nang"><img src="assets/img/hl-ao-nang-1800.jpg" srcset="assets/img/hl-ao-nang-800.jpg 800w, assets/img/hl-ao-nang-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Rocks on a white sand beach with turquoise water in Ao Nang" width="1800" height="1200" loading="lazy" decoding="async"><span class="card-tag">Krabi</span><span class="card-body"><strong>Ao Nang</strong><em>Boats out to Railay and the islands.</em></span></a>
+        <a class="card" href="/highlights#karon"><img src="assets/img/hl-karon-1800.jpg" srcset="assets/img/hl-karon-800.jpg 800w, assets/img/hl-karon-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Aerial view of Karon Beach, the town and green hills" width="1800" height="1013" loading="lazy" decoding="async"><span class="card-tag">Phuket</span><span class="card-body"><strong>Karon Beach</strong><em>A long, wide beach on Phuket's west coast.</em></span></a>
+        <a class="card" href="/highlights#longtails"><img src="assets/img/hl-longtails-1800.jpg" srcset="assets/img/hl-longtails-800.jpg 800w, assets/img/hl-longtails-1800.jpg 1800w" sizes="(min-width: 900px) 25vw, (min-width: 600px) 50vw, 100vw" alt="Colourful longtail boats pulled up on a beach below green hills" width="1800" height="1200" loading="lazy" decoding="async"><span class="card-tag">Andaman Coast</span><span class="card-body"><strong>Longtail boats</strong><em>The water taxis of the south.</em></span></a>
+      </div>
+      <div class="btn-row center-row"><a class="btn outline" href="/highlights">Explore more highlights →</a></div>
+    </div>
+  </section>
+
+  <!-- LIMESTONE & SEA -->
+  <section class="feature reverse" id="fire">
+    <div class="feature-media">
+    <img src="assets/img/limestone-krabi-1800.jpg" srcset="assets/img/limestone-krabi-800.jpg 800w, assets/img/limestone-krabi-1800.jpg 1800w" sizes="100vw" alt="Jungle-covered limestone islands around a narrow turquoise inlet, seen from above" width="1800" height="2250" style="object-position: 50% 50%" loading="lazy" decoding="async"></div>
+    <div class="container feature-body">
+      <div class="feature-text">
+      <p class="eyebrow light">Limestone &amp; sea</p>
+      <h2>Islands carved from ancient reefs.</h2>
+      <p class="lead">The towers of Phang Nga Bay, Krabi and Phi Phi are limestone that formed as reefs and sea-floor sediment millions of years ago. Rain and waves have since worn them into sheer cliffs, sea caves and hidden lagoons. On the other side of the peninsula, the Gulf islands of Samui, Phangan and Tao are granite, with rounded boulders and palm-lined bays.</p>
+      <a class="link-arrow" href="#history">Read the history →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="section light" id="history">
+    <div class="container split-light">
+      <div>
+        <p class="eyebrow">The history of Thailand</p>
+        <h2>A kingdom of many capitals.</h2>
+        <p class="lead">Sukhothai, Ayutthaya, Thonburi, then Bangkok. Siam was the only country in Southeast Asia never colonised by a European power. The guide opens with the story behind the temples and ruins you will visit.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="#journal">Read the journal</a>
+        </div>
+      </div>
+      <ul class="features"><li>Sukhothai and the Thai script</li><li>Ayutthaya, 1351 to 1767</li><li>Bangkok, capital since 1782</li><li>Siam becomes Thailand, 1939</li></ul>
+    </div>
+  </section>
+
+  <!-- BANGKOK AFTER DARK -->
+  <section class="feature" id="aurora">
+    <div class="feature-media"><img src="assets/img/night-bangkok-1800.jpg" srcset="assets/img/night-bangkok-800.jpg 800w, assets/img/night-bangkok-1800.jpg 1800w" sizes="100vw" alt="Bangkok's skyscrapers lit up at night above a busy road" width="1800" height="2700" style="object-position: 50% 45%" loading="lazy" decoding="async"></div>
+    <div class="container feature-body">
+      <div class="feature-text">
+        <p class="eyebrow light">Bangkok after dark</p>
+        <h2>When the city comes alive.</h2>
+        <p class="lead">Bangkok is at its best once the heat goes out of the day. Street food stalls fill the pavements, the riverside temples are lit up, and rooftop bars look out over one of the biggest cities in Asia. A few evenings spent eating your way through the night markets is part of any first trip.</p>
+        <a class="link-arrow" href="/blog/where-to-stay-in-thailand">Where to stay in Bangkok →</a>
+        <ul class="spots">
+          <li><strong>Chinatown</strong><span>Yaowarat Road's food stalls, busiest after dark.</span></li>
+          <li><strong>Night markets</strong><span>Street food, clothes and crafts across the city.</span></li>
+          <li><strong>The river</strong><span>Wat Arun and the Grand Palace lit up at night.</span></li>
+          <li><strong>The guide</strong><span>A full Bangkok edition is on the way.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNAL -->
+  <section class="section deep" id="journal">
+    <div class="container">
+      <p class="eyebrow center">From the journal</p>
+      <h2 class="center">Tips, maps &amp; field notes</h2>
+      <div class="journal-grid">
+        <article class="journal-card">
+          <a href="/blog/best-time-to-visit-thailand"><img src="assets/img/journal-beach-aerial-1800.jpg" srcset="assets/img/journal-beach-aerial-800.jpg 800w, assets/img/journal-beach-aerial-1800.jpg 1800w" sizes="(min-width: 900px) 33vw, 100vw" alt="Aerial view of Karon Beach in Phuket, with turquoise water, the town and green hills" width="1800" height="1013" loading="lazy" decoding="async"></a>
+          <div><span class="tags">Planning · Weather</span><h3><a href="/blog/best-time-to-visit-thailand">Best Time to Visit Thailand: A Month-by-Month Guide</a></h3><p>Cool, hot and rainy seasons, the two coasts and the big festivals.</p><a class="link-arrow" href="/blog/best-time-to-visit-thailand">Read the guide →</a></div>
+        </article>
+        <article class="journal-card">
+          <a href="/blog/where-to-stay-in-thailand"><img src="assets/img/journal-bangkok-1800.jpg" srcset="assets/img/journal-bangkok-800.jpg 800w, assets/img/journal-bangkok-1800.jpg 1800w" sizes="(min-width: 900px) 33vw, 100vw" alt="Bangkok's skyline at twilight, with the King Power Mahanakhon tower" width="1800" height="2700" loading="lazy" decoding="async"></a>
+          <div><span class="tags">Regions</span><h3><a href="/blog/where-to-stay-in-thailand">Where to Stay in Thailand: Bases Compared</a></h3><p>Bangkok, Chiang Mai, Phuket, Krabi and the Gulf islands, by route and style of trip.</p><a class="link-arrow" href="/blog/where-to-stay-in-thailand">Read the guide →</a></div>
+        </article>
+        <article class="journal-card">
+          <a href="/blog/getting-around-thailand"><img src="assets/img/journal-longtails-1800.jpg" srcset="assets/img/journal-longtails-800.jpg 800w, assets/img/journal-longtails-1800.jpg 1800w" sizes="(min-width: 900px) 33vw, 100vw" alt="Colourful longtail boats pulled up on a beach below green limestone hills" width="1800" height="1200" loading="lazy" decoding="async"></a>
+          <div><span class="tags">Getting around</span><h3><a href="/blog/getting-around-thailand">Getting Around Thailand: Trains, Flights &amp; Ferries</a></h3><p>Sleeper trains, cheap flights, island ferries and when to take a Grab.</p><a class="link-arrow" href="/blog/getting-around-thailand">Read the guide →</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEASONS FEATURE -->
+  <section class="feature" id="seasons">
+    <div class="feature-media">
+    <img src="assets/img/seasons-tonsai-1800.jpg" srcset="assets/img/seasons-tonsai-800.jpg 800w, assets/img/seasons-tonsai-1800.jpg 1800w" sizes="100vw" alt="Tonsai Village on Koh Phi Phi from above, between two turquoise bays" width="1800" height="1200" style="object-position: 50% 50%" loading="lazy" decoding="async"></div>
+    <div class="container feature-body">
+      <div class="feature-text">
+        <p class="eyebrow light">The companion editions</p>
+        <h2>Two coasts, three seasons.</h2>
+        <p class="lead">From November to February the weather is at its coolest and driest across most of the country. March to May is the hot season. From May to October the monsoon brings rain to the Andaman coast, while the Gulf islands have their wettest months from October to December. Each companion book shows how to make the most of that.</p>
+        <a class="link-arrow" href="#checklist">Get notified when they launch →</a>
+      <ul class="spots">
+        <li><strong>Islands edition</strong><span>Andaman and Gulf islands, ferries, beaches and dive sites.</span></li>
+        <li><strong>Bangkok edition</strong><span>Neighbourhoods, the river, markets and day trips.</span></li>
+        <li><strong>Street food</strong><span>Dishes by region, markets and how to order.</span></li>
+        <li><strong>Rainy season</strong><span>Which coast to pick from May to December.</span></li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPANION BOOK CARDS -->
+  <section class="section stone">
+    <div class="container book-feature reverse">
+      <a class="cover" href="#guides"><img src="assets/img/cover-islands-900.jpg" srcset="assets/img/cover-islands-500.jpg 500w, assets/img/cover-islands-900.jpg 900w" sizes="(min-width: 900px) 360px, 80vw" alt="Cover of Discover Thailand, Islands Edition" width="900" height="1350" loading="lazy" decoding="async"></a>
+      <div>
+        <p class="eyebrow">The islands edition · Coming soon</p>
+        <h3>Discover Thailand<small>Islands Edition</small></h3>
+        <p class="subtitle">Beaches, boats &amp; reefs</p>
+        <ul class="features"><li>Andaman &amp; Gulf islands</li><li>Ferries &amp; island hopping</li><li>Snorkelling &amp; diving</li><li>Which coast in which month</li></ul>
+        <div class="btn-row">
+          <a class="btn primary" href="#checklist">Notify me at launch</a>
+          <a class="btn outline" href="#guide">See the complete guide</a>
+        </div>
+      </div>
+    </div>
+    <div class="container book-feature">
+      <a class="cover" href="#guides"><img src="assets/img/cover-bangkok-900.jpg" srcset="assets/img/cover-bangkok-500.jpg 500w, assets/img/cover-bangkok-900.jpg 900w" sizes="(min-width: 900px) 360px, 80vw" alt="Cover of Discover Thailand, Bangkok Edition" width="900" height="1350" loading="lazy" decoding="async"></a>
+      <div>
+        <p class="eyebrow">The Bangkok edition · Coming soon</p>
+        <h3>Discover Thailand<small>Bangkok Edition</small></h3>
+        <p class="subtitle">Temples, river &amp; night markets</p>
+        <ul class="features"><li>Neighbourhood by neighbourhood</li><li>BTS, MRT &amp; river boats</li><li>Temples &amp; dress code</li><li>Day trips to Ayutthaya</li></ul>
+        <div class="btn-row">
+          <a class="btn primary" href="#checklist">Notify me at launch</a>
+          <a class="btn outline" href="#guide">See the complete guide</a>
+        </div>
+      </div>
+    </div>
+    <div class="container book-feature reverse">
+      <a class="cover" href="#guides"><img src="assets/img/cover-food-900.jpg" srcset="assets/img/cover-food-500.jpg 500w, assets/img/cover-food-900.jpg 900w" sizes="(min-width: 900px) 360px, 80vw" alt="Cover of Discover Thailand, Street Food" width="900" height="1350" loading="lazy" decoding="async"></a>
+      <div>
+        <p class="eyebrow">The street food guide · Coming soon</p>
+        <h3>Discover Thailand<small>Street Food</small></h3>
+        <p class="subtitle">What to eat &amp; where to find it</p>
+        <ul class="features"><li>Dishes from every region</li><li>Markets &amp; food streets</li><li>Ordering &amp; spice levels</li><li>Eating safely</li></ul>
+        <div class="btn-row">
+          <a class="btn primary" href="#checklist">Notify me at launch</a>
+          <a class="btn outline" href="#guide">See the complete guide</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIET THAILAND -->
+  <section class="photo-section tall">
+    <img class="bg" src="assets/img/quiet-pandanus-1800.jpg" srcset="assets/img/quiet-pandanus-800.jpg 800w, assets/img/quiet-pandanus-1800.jpg 1800w" sizes="100vw" alt="Pandanus trees framing a calm, empty shore in Krabi" width="1800" height="2700" style="object-position: 50% 50%" loading="lazy" decoding="async">
+    <div class="shade heavy"></div>
+    <div class="container narrow center on-photo">
+      <p class="eyebrow light">Beyond the postcards</p>
+      <h2>Discover the quiet Thailand.</h2>
+      <p class="lead">Away from the busiest beaches the country slows right down: mountain villages in the north, rice fields and Khmer ruins in Isan, and island shores where the only sound is the sea. The guide points you there too.</p>
+      <div class="btn-row center-row"><a class="btn primary" href="#guides">See the guide</a></div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="section deep" id="map">
+    <div class="container narrow center">
+      <p class="eyebrow">The country</p>
+      <h2>Six regions, one long country.</h2>
+      <svg class="map" viewBox="0 0 394 618" style="max-width: 420px" role="img" aria-label="Schematic map of six Thailand regions and the main north–south route">
+        <title>Schematic map of Thailand regions</title>
+        <path class="range" d="M140 31 L163 41 L167 66 L190 66 L182 107 L205 130 L224 117 L243 126 L273 107 L296 115 L323 145 L326 180 L349 199 L357 225 L349 263 L323 259 L266 263 L243 290 L235 324 L254 362 L231 343 L209 324 L180 326 L178 297 L163 294 L144 297 L142 328 L138 358 L125 389 L114 411 L117 449 L140 461 L155 487 L159 529 L182 544 L205 548 L224 571 L212 586 L186 590 L167 563 L152 560 L133 544 L117 522 L102 503 L91 495 L79 491 L79 468 L91 430 L102 396 L127 358 L112 313 L114 267 L87 237 L91 195 L60 161 L57 123 L45 100 L60 62 L102 54 L125 43 Z"/>
+        <g class="route"><path d="M105 93 L148 161 L166 261 L163 284 L142 329 L133 358 L110 408 L119 459 L102 500"/></g>
+        <g class="pin"><circle cx="163" cy="284" r="8"/><text x="181" y="290">Bangkok</text></g>
+        <g class="pin"><circle cx="166" cy="261" r="8"/><text x="182" y="253">Central Plains</text></g>
+        <g class="pin"><circle cx="105" cy="93" r="8"/><text x="119" y="98">The North</text></g>
+        <g class="pin"><circle cx="252" cy="182" r="8"/><text x="266" y="187">Isan</text></g>
+        <g class="pin"><circle cx="144" cy="446" r="8"/><text x="158" y="451">Gulf Islands</text></g>
+        <g class="pin"><circle cx="102" cy="500" r="8"/><text x="82" y="534">Andaman Coast</text></g>
+      </svg>
+      <p class="fine">Schematic map, not to scale. The grey line is the main route from Chiang Mai through Bangkok to the Andaman coast.</p>
+    </div>
+  </section>
+
+  <!-- THE GUIDES -->
+  <section class="section guides" id="guides">
+    <img class="guides-bg" src="assets/img/guides-islands-1800.jpg" srcset="assets/img/guides-islands-800.jpg 800w, assets/img/guides-islands-1800.jpg 1800w" sizes="100vw" alt="" width="1800" height="2400" loading="lazy" decoding="async">
+    <div class="guides-fade"></div>
+    <div class="container">
+      <p class="eyebrow center">The guides</p>
+      <h2 class="center">Four guides, every journey.</h2>
+      <p class="lead center narrow">The complete guide and the islands, Bangkok and street food editions are in preparation. Leave your email below and we will tell you the day each one launches.</p>
+      <div class="book-grid">
+        <article class="book">
+          <a class="cover" href="#guide"><img src="assets/img/cover-guide-900.jpg" srcset="assets/img/cover-guide-500.jpg 500w, assets/img/cover-guide-900.jpg 900w" sizes="(min-width: 700px) 320px, 70vw" alt="Cover of Discover Thailand, the complete travel guide" width="900" height="1350" loading="lazy" decoding="async"></a>
+          <p class="series">The complete guide</p>
+          <h3>Discover Thailand</h3>
+          <p class="subtitle">Regions, routes &amp; maps</p>
+          <span class="soon-label">Coming soon</span>
+          <div class="btn-row center-row"><a class="btn primary" href="#checklist">Notify me</a></div>
+        </article>
+        <article class="book">
+          <a class="cover" href="#seasons"><img src="assets/img/cover-islands-900.jpg" srcset="assets/img/cover-islands-500.jpg 500w, assets/img/cover-islands-900.jpg 900w" sizes="(min-width: 700px) 320px, 70vw" alt="Cover of Discover Thailand, Islands Edition" width="900" height="1350" loading="lazy" decoding="async"></a>
+          <p class="series">Islands edition</p>
+          <h3>Discover Thailand</h3>
+          <p class="subtitle">Beaches, boats &amp; reefs</p>
+          <span class="soon-label">Coming soon</span>
+          <div class="btn-row center-row"><a class="btn primary" href="#checklist">Notify me</a></div>
+        </article>
+        <article class="book">
+          <a class="cover" href="#seasons"><img src="assets/img/cover-bangkok-900.jpg" srcset="assets/img/cover-bangkok-500.jpg 500w, assets/img/cover-bangkok-900.jpg 900w" sizes="(min-width: 700px) 320px, 70vw" alt="Cover of Discover Thailand, Bangkok Edition" width="900" height="1350" loading="lazy" decoding="async"></a>
+          <p class="series">Bangkok edition</p>
+          <h3>Discover Thailand</h3>
+          <p class="subtitle">Temples, river &amp; night markets</p>
+          <span class="soon-label">Coming soon</span>
+          <div class="btn-row center-row"><a class="btn primary" href="#checklist">Notify me</a></div>
+        </article>
+        <article class="book">
+          <a class="cover" href="#seasons"><img src="assets/img/cover-food-900.jpg" srcset="assets/img/cover-food-500.jpg 500w, assets/img/cover-food-900.jpg 900w" sizes="(min-width: 700px) 320px, 70vw" alt="Cover of Discover Thailand, Street Food" width="900" height="1350" loading="lazy" decoding="async"></a>
+          <p class="series">Street food</p>
+          <h3>Discover Thailand</h3>
+          <p class="subtitle">What to eat &amp; where to find it</p>
+          <span class="soon-label">Coming soon</span>
+          <div class="btn-row center-row"><a class="btn primary" href="#checklist">Notify me</a></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHECKLIST -->
+  <section class="photo-section tall" id="checklist">
+    <img class="bg" src="assets/img/checklist-beach-1800.jpg" srcset="assets/img/checklist-beach-800.jpg 800w, assets/img/checklist-beach-1800.jpg 1800w" sizes="100vw" alt="Longtail boats moored off a quiet white sand beach with islands on the horizon" width="1800" height="1200" style="object-position: 50% 55%" loading="lazy" decoding="async">
+    <div class="shade heavy"></div>
+    <div class="container narrow center on-photo">
+      <p class="eyebrow light">Free download</p>
+      <h2>The Thailand Travel Checklist</h2>
+      <p class="lead">A free two-page checklist for planning your trip, from landing at Suvarnabhumi to your last longtail boat ride.</p>
+      <form class="signup" id="signup" data-endpoint="" novalidate>
+        <label class="sr-only" for="email">Email address</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+        <button class="btn primary" type="submit">Send it</button>
+      </form>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+      <p class="fine light">One email per new guide. Unsubscribe any time.</p>
+      <ul class="check-items">
+        <li>Getting there: Suvarnabhumi &amp; Don Mueang</li>
+        <li>Visa-free stay &amp; the TDAC arrival card</li>
+        <li>Trains, flights &amp; island ferries</li>
+        <li>Heat, rain &amp; what to pack</li>
+        <li>Temple dress code &amp; etiquette</li>
+        <li>Tourist Police (1155)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- SERIES BAND -->
+  <section class="band">
+    <div class="container band-inner">
+      <p><strong>Part of the Discover series.</strong> Independent travel guides, one destination at a time.</p>
+      <a class="link-arrow dark" href="https://discovericeland.co">Discover Iceland →</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="logo" href="#top">Discover<b>Thailand</b><i>.</i></a>
+    <nav aria-label="Footer">
+      <a href="#guides">All guides</a>
+      <a href="#guide">Travel guide</a>
+      <a href="/highlights">Highlights</a>
+      <a href="#fire">Islands</a>
+      <a href="#history">History</a>
+      <a href="#journal">Journal</a>
+      <a href="#seasons">Seasons</a>
+      <a href="#checklist">Free checklist</a>
+    </nav>
+    <p>© <span id="year">2026</span> Discover Thailand. Independent travel guides to Thailand.</p>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  "use strict";
+
+  var header = document.getElementById("header");
+  var nav = document.getElementById("nav");
+  var toggle = document.getElementById("navToggle");
+
+  // Solid header after scrolling past the top
+  function onScroll() {
+    header.classList.toggle("solid", window.scrollY > 40);
+  }
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+
+  // Mobile menu
+  toggle.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", String(open));
+  });
+  nav.addEventListener("click", function (e) {
+    if (e.target.closest("a") && nav.classList.contains("open")) {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Dropdowns (click/tap + Escape)
+  var dropdowns = document.querySelectorAll(".dropdown");
+  dropdowns.forEach(function (dd) {
+    var btn = dd.querySelector(".dropdown-btn");
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+      var willOpen = !dd.classList.contains("open");
+      dropdowns.forEach(function (o) {
+        o.classList.remove("open");
+        o.querySelector(".dropdown-btn").setAttribute("aria-expanded", "false");
+      });
+      dd.classList.toggle("open", willOpen);
+      btn.setAttribute("aria-expanded", String(willOpen));
+    });
+  });
+  document.addEventListener("click", function () {
+    dropdowns.forEach(function (o) {
+      o.classList.remove("open");
+      o.querySelector(".dropdown-btn").setAttribute("aria-expanded", "false");
+    });
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape") {
+      dropdowns.forEach(function (o) { o.classList.remove("open"); });
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+
+  // Footer year
+  var year = document.getElementById("year");
+  if (year) year.textContent = new Date().getFullYear();
+
+  // Checklist sign-up.
+  // Set data-endpoint on #signup (in index.html) to your form service URL.
+  // Until then the form does NOT collect addresses and says so honestly.
+  var form = document.getElementById("signup");
+  var msg = document.getElementById("formMsg");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    var email = form.elements.email.value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      msg.textContent = "Please enter a valid email address.";
+      return;
+    }
+    var endpoint = form.getAttribute("data-endpoint");
+    if (!endpoint) {
+      msg.textContent = "Sign-ups open soon. Please check back shortly.";
+      return;
+    }
+    msg.textContent = "Sending…";
+    fetch(endpoint, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ email: email, source: location.hostname })
+    }).then(function (r) {
+      if (!r.ok) throw new Error("bad status");
+      form.reset();
+      msg.textContent = "Thank you. Check your inbox for the checklist.";
+    }).catch(function () {
+      msg.textContent = "Something went wrong. Please try again.";
+    });
+  });
+})();
+
+</script>
+</body>
+</html>

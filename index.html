@@ -255,7 +255,8 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 .coast-btn[aria-pressed="true"], .isl-chip.active { background: var(--frost); color: var(--night); border-color: var(--frost); }
 .isl-pick { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(28px, 5vw, 64px); align-items: center; margin-top: 44px; }
 .isl-map { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
-.isl-map .land { fill: rgba(159, 212, 226, 0.06); stroke: var(--glacier); stroke-width: 1.5; stroke-dasharray: 2 6; stroke-linecap: round; }
+.isl-map .land { fill: rgba(159, 212, 226, 0.06); stroke: none; }
+.isl-map .coast { fill: none; stroke: var(--glacier); stroke-width: 1.5; stroke-dasharray: 2 6; stroke-linecap: round; }
 .isl-map .sea { font: 600 11px var(--sans); letter-spacing: 0.22em; text-transform: uppercase; fill: rgba(159, 212, 226, 0.45); }
 .isl-map .city rect { fill: var(--frost); }
 .isl-map .city text { font: 600 12px var(--sans); fill: var(--mist); }

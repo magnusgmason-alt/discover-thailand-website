@@ -56,6 +56,9 @@ def picker_html():
     first = ISLANDS[0]
     w, h = xy(102.3, 5.4)
     land = "M" + " L".join("{} {}".format(*xy(*p)) for p in OUTLINE) + " Z"
+    # The coastline stroke skips the two straight edges where the map is cut off inland.
+    coast_pts = OUTLINE[-2:] + OUTLINE[:-4]
+    coast = "M" + " L".join("{} {}".format(*xy(*p)) for p in coast_pts)
     bx, by = xy(100.5, 13.75)
     pins = []
     for i in ISLANDS:
@@ -92,8 +95,9 @@ def picker_html():
         <div class="isl-nav">
           <svg class="isl-map" viewBox="0 0 {w} {h}" role="group" aria-label="Schematic map of Thailand's islands">
             <path class="land" d="{land}"/>
-            <text class="sea" x="{xy(97.2, 9.6)[0]}" y="{xy(97.2, 9.6)[1]}">Andaman Sea</text>
-            <text class="sea" x="{xy(100.6, 11.0)[0]}" y="{xy(100.6, 11.0)[1]}">Gulf of Thailand</text>
+            <path class="coast" d="{coast}"/>
+            <text class="sea" x="{xy(97.7, 9.9)[0]}" y="{xy(97.7, 9.9)[1]}" text-anchor="middle">Andaman Sea</text>
+            <text class="sea" x="{xy(100.75, 11.2)[0]}" y="{xy(100.75, 11.2)[1]}" text-anchor="middle">Gulf of Thailand</text>
             <g class="city"><rect x="{bx - 5}" y="{by - 5}" width="10" height="10"/><text x="{bx + 12}" y="{by + 4}">Bangkok</text></g>
             {''.join(pins)}
           </svg>

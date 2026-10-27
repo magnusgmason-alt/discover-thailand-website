@@ -33,7 +33,6 @@ SLOTS = {
     "strip-maya-bay": 1647110,
     "editions-skyline": 36527921,
     "guide-wat-arun-river": 11105012,
-    "limestone-krabi": 19160369,
     "night-bangkok": 30516945,
     "journal-beach-aerial": 4159512,
     "journal-bangkok": 36751253,
@@ -66,7 +65,7 @@ COVERS = {
 }
 
 PAGE_FILES = ["index.html", "highlights.html", "robots.txt", "sitemap.xml"]
-PAGE_DIRS = ["blog"]
+PAGE_DIRS = ["blog", "islands"]
 UA = "Mozilla/5.0 (compatible; DiscoverThailandBuild/1.0)"
 
 
@@ -130,9 +129,14 @@ def main():
     from highlights_content import HIGHLIGHTS
     for h in HIGHLIGHTS:
         SLOTS["hx-" + h["slug"]] = h["photo"]
+    import make_islands
+    make_islands.main()
+    for i in make_islands.ISLANDS:
+        SLOTS["isl-" + i["slug"]] = i["photo"]
 
     for f in PAGE_FILES:
         text = (ROOT / f).read_text(encoding="utf8").replace("__SITE__", SITE)
+        text = text.replace("<!--ISLAND_PICKER-->", make_islands.picker_html())
         (DIST / f).write_text(text, encoding="utf8")
     for d in PAGE_DIRS:
         shutil.copytree(ROOT / d, DIST / d)

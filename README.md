@@ -13,6 +13,9 @@ Set `SITE` in `site_config.py` to the final domain (for example `https://discove
 ## Highlights page
 `/highlights` is built from `highlights_content.py` by `make_highlights.py`. Add an entry (with a Pexels ID or a photo in `photos/`) to add a highlight; the category buttons update automatically.
 
+## Islands
+The homepage island picker and the guides at `/islands/<slug>` are built from `islands_content.py` by `make_islands.py`. Each island has a Pexels photo ID in `photo`.
+
 ## Journal
 The three articles in `/blog` are built from `articles_content.py` by `make_articles.py`.
 

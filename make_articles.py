@@ -149,7 +149,7 @@ def slugify(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")[:60]
 
 
-def page(a, others):
+def page(a, others, section="blog", crumb=("Journal", "/#journal"), keep=("From the journal", "Keep reading"), cta=""):
     body = a["body"].strip()
     # Number the question headings and build the table of contents.
     heads = re.findall(r"<h2>(.*?)</h2>", body)
@@ -163,7 +163,7 @@ def page(a, others):
 
     words = len(re.sub(r"<[^>]+>", " ", body).split())
     minutes = max(3, round(words / 220))
-    url = f"{SITE}/blog/{a['slug']}"
+    url = f"{SITE}/{section}/{a['slug']}"
     img_url = f"{SITE}/assets/img/{a['image']}-1800.jpg"
     sources = "".join(f'<li><a href="{u}" rel="noopener">{html.escape(t)}</a></li>' for t, u in a["sources"])
     ld = {
@@ -183,14 +183,14 @@ def page(a, others):
         "@type": "BreadcrumbList",
         "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Discover Thailand", "item": SITE + "/"},
-            {"@type": "ListItem", "position": 2, "name": "Journal", "item": SITE + "/#journal"},
+            {"@type": "ListItem", "position": 2, "name": crumb[0], "item": SITE + crumb[1]},
             {"@type": "ListItem", "position": 3, "name": a["short"], "item": url},
         ],
     }
     cards = "".join(
         f"""<article class="journal-card">
-          <a class="cover-link" href="/blog/{o['slug']}"><img src="/assets/img/{o['image']}-800.jpg" alt="{html.escape(o['image_alt'])}" width="800" height="533" loading="lazy" decoding="async"></a>
-          <div><span class="tags">{o['category']}</span><h3><a href="/blog/{o['slug']}">{o['short']}</a></h3><p>{o['teaser']}</p><a class="link-arrow" href="/blog/{o['slug']}">Read the guide →</a></div>
+          <a class="cover-link" href="/{section}/{o['slug']}"><img src="/assets/img/{o['image']}-800.jpg" alt="{html.escape(o['image_alt'])}" width="800" height="533" loading="lazy" decoding="async"></a>
+          <div><span class="tags">{o['category']}</span><h3><a href="/{section}/{o['slug']}">{o['short']}</a></h3><p>{o['teaser']}</p><a class="link-arrow" href="/{section}/{o['slug']}">Read the guide →</a></div>
         </article>"""
         for o in others
     )
@@ -221,7 +221,7 @@ def page(a, others):
     <img class="bg" src="/assets/img/{a['image']}-1800.jpg" srcset="/assets/img/{a['image']}-800.jpg 800w, /assets/img/{a['image']}-1800.jpg 1800w" sizes="100vw" alt="{html.escape(a['image_alt'])}" fetchpriority="high">
     <div class="shade"></div>
     <div class="a-hero-inner">
-      <p class="a-crumbs"><a href="/">Discover Thailand</a> / <a href="/#journal">Journal</a></p>
+      <p class="a-crumbs"><a href="/">Discover Thailand</a> / <a href="{crumb[1]}">{crumb[0]}</a></p>
       <div class="a-meta"><span class="a-pill">{minutes} min read</span><span class="a-cat">{a['category']}</span></div>
       <h1>{a['title']}</h1>
       <span class="rule"></span>
@@ -232,11 +232,12 @@ def page(a, others):
     {body}
     <p class="checked">{a['checked_note']}</p>
     <div class="sources"><h2>Sources</h2><ul>{sources}</ul></div>
+    {cta}
   </article>
   <section class="keep">
     <div class="container">
-      <p class="eyebrow center">From the journal</p>
-      <h2>Keep reading</h2>
+      <p class="eyebrow center">{keep[0]}</p>
+      <h2>{keep[1]}</h2>
       <div class="journal-grid">{cards}</div>
     </div>
   </section>

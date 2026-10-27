@@ -248,6 +248,55 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 .site-footer nav a:hover { color: var(--white); text-decoration: underline; }
 .site-footer p { margin: 0; opacity: 0.65; }
 
+/* Island picker */
+.coast-tabs { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 30px; }
+.coast-btn, .isl-chip { background: transparent; color: var(--frost); border: 1px solid var(--line); border-radius: 999px; padding: 10px 18px; font: 700 0.68rem var(--sans); letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: background 0.2s, color 0.2s, border-color 0.2s; }
+.coast-btn:hover, .isl-chip:hover { border-color: rgba(232, 238, 241, 0.5); }
+.coast-btn[aria-pressed="true"], .isl-chip.active { background: var(--frost); color: var(--night); border-color: var(--frost); }
+.isl-pick { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: clamp(28px, 5vw, 64px); align-items: center; margin-top: 44px; }
+.isl-map { display: block; width: 100%; max-width: 420px; height: auto; margin: 0 auto; }
+.isl-map .land { fill: rgba(159, 212, 226, 0.06); stroke: var(--glacier); stroke-width: 1.5; stroke-dasharray: 2 6; stroke-linecap: round; }
+.isl-map .sea { font: 600 11px var(--sans); letter-spacing: 0.22em; text-transform: uppercase; fill: rgba(159, 212, 226, 0.45); }
+.isl-map .city rect { fill: var(--frost); }
+.isl-map .city text { font: 600 12px var(--sans); fill: var(--mist); }
+.isl-pin { cursor: pointer; outline: none; transition: opacity 0.25s; }
+.isl-pin circle { fill: var(--red); stroke: var(--night); stroke-width: 3; transition: r 0.2s, fill 0.2s; }
+.isl-pin text { font: 600 13px var(--sans); fill: var(--mist); }
+.isl-pin:hover text, .isl-pin:focus-visible text { fill: var(--white); }
+.isl-pin:focus-visible circle { stroke: var(--glacier); }
+.isl-pin.active circle { r: 10; fill: var(--white); stroke: var(--red); stroke-width: 4; }
+.isl-pin.active text { fill: var(--white); font-weight: 800; }
+.isl-pin.dim { opacity: 0.22; pointer-events: none; }
+.isl-chips { display: none; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 14px; }
+.isl-chip { padding: 8px 14px; letter-spacing: 0.1em; }
+.isl-nav .fine { text-align: center; }
+.isl-panel { background: var(--night); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45); }
+.isl-panel img { width: 100%; aspect-ratio: 16 / 10; object-fit: cover; -webkit-mask-image: linear-gradient(180deg, #000 65%, transparent 100%); mask-image: linear-gradient(180deg, #000 65%, transparent 100%); }
+.isl-body { position: relative; margin-top: -48px; padding: 0 clamp(22px, 3vw, 34px) clamp(24px, 3vw, 34px); }
+.isl-coast { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacier); margin-bottom: 8px; }
+.isl-body h3 { font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 800; letter-spacing: -0.035em; }
+.isl-tagline { font-weight: 600; color: var(--white); margin: 8px 0 12px; }
+.isl-body p { color: var(--mist); }
+.isl-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 20px 0 18px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.isl-facts dt { font-size: 0.64rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--glacier); margin-bottom: 4px; }
+.isl-facts dd { margin: 0; font-weight: 600; font-size: 0.88rem; line-height: 1.4; }
+.isl-cta { margin: 56px 0 0; padding: 34px 30px; border-radius: var(--radius); background: var(--night); color: var(--frost); }
+.isl-cta h2 { color: var(--white); margin-bottom: 12px; }
+.isl-cta p { color: var(--mist); }
+.isl-cta .eyebrow { margin-bottom: 10px; }
+.article .a-body .isl-cta h2 { color: var(--white); margin-top: 0; }
+.article .a-body .isl-cta p { color: var(--mist); }
+.article .a-body .isl-cta a.btn { color: var(--night); text-decoration: none; }
+@media (max-width: 1000px) {
+  .isl-pick { grid-template-columns: 1fr; }
+  .isl-map { max-width: 320px; }
+}
+@media (max-width: 760px) {
+  .isl-map { display: none; }
+  .isl-chips { display: flex; }
+  .isl-facts { grid-template-columns: 1fr; gap: 10px; }
+}
+
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.8s, transform 0.8s; }
 .reveal.in { opacity: 1; transform: none; }
@@ -323,7 +372,7 @@ h3 { font-size: 1.5rem; font-weight: 800; }
       </div>
       <a href="#guide">Travel guide</a>
       <a href="/highlights">Highlights</a>
-      <a href="#fire">Islands</a>
+      <a href="#islands">Islands</a>
       <a href="#history">History</a>
       <a href="#journal">Journal</a>
       <a href="#seasons">Seasons</a>
@@ -460,19 +509,8 @@ h3 { font-size: 1.5rem; font-weight: 800; }
     </div>
   </section>
 
-  <!-- LIMESTONE & SEA -->
-  <section class="feature reverse" id="fire">
-    <div class="feature-media">
-    <img src="assets/img/limestone-krabi-1800.jpg" srcset="assets/img/limestone-krabi-800.jpg 800w, assets/img/limestone-krabi-1800.jpg 1800w" sizes="100vw" alt="Jungle-covered limestone islands around a narrow turquoise inlet, seen from above" width="1800" height="2250" style="object-position: 50% 50%" loading="lazy" decoding="async"></div>
-    <div class="container feature-body">
-      <div class="feature-text">
-      <p class="eyebrow light">Limestone &amp; sea</p>
-      <h2>Islands carved from ancient reefs.</h2>
-      <p class="lead">The towers of Phang Nga Bay, Krabi and Phi Phi are limestone that formed as reefs and sea-floor sediment millions of years ago. Rain and waves have since worn them into sheer cliffs, sea caves and hidden lagoons. On the other side of the peninsula, the Gulf islands of Samui, Phangan and Tao are granite, with rounded boulders and palm-lined bays.</p>
-      <a class="link-arrow" href="#history">Read the history →</a>
-      </div>
-    </div>
-  </section>
+  <!-- ISLANDS (built from islands_content.py by make_islands.py) -->
+  <!--ISLAND_PICKER-->
 
   <!-- HISTORY -->
   <section class="section light" id="history">
@@ -713,7 +751,7 @@ h3 { font-size: 1.5rem; font-weight: 800; }
       <a href="#guides">All guides</a>
       <a href="#guide">Travel guide</a>
       <a href="/highlights">Highlights</a>
-      <a href="#fire">Islands</a>
+      <a href="#islands">Islands</a>
       <a href="#history">History</a>
       <a href="#journal">Journal</a>
       <a href="#seasons">Seasons</a>

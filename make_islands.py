@@ -97,7 +97,7 @@ def picker_html():
             <path class="land" d="{land}"/>
             <path class="coast" d="{coast}"/>
             <text class="sea" x="{xy(97.7, 9.9)[0]}" y="{xy(97.7, 9.9)[1]}" text-anchor="middle">Andaman Sea</text>
-            <text class="sea" x="{xy(100.75, 11.2)[0]}" y="{xy(100.75, 11.2)[1]}" text-anchor="middle">Gulf of Thailand</text>
+            <text class="sea" x="{xy(101.1, 11.5)[0]}" y="{xy(101.1, 11.5)[1]}" text-anchor="middle"><tspan x="{xy(101.1, 11.5)[0]}">Gulf of</tspan><tspan x="{xy(101.1, 11.5)[0]}" dy="15">Thailand</tspan></text>
             <g class="city"><rect x="{bx - 5}" y="{by - 5}" width="10" height="10"/><text x="{bx + 12}" y="{by + 4}">Bangkok</text></g>
             {''.join(pins)}
           </svg>

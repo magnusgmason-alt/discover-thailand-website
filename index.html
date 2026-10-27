@@ -13,7 +13,7 @@
 <meta property="og:image" content="__SITE__/assets/img/hero-longtail-1800.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="description" content="Discover Thailand: the complete travel guide to Thailand, with islands, Bangkok and street food editions.">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <style>
 /* Discover Thailand — styles
    Editorial, dark "basalt night" palette. Photos dissolve into the page
@@ -35,7 +35,7 @@
   --white: #fff;
   --teal: #0c2a30;
   --sans: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --serif: var(--sans);
   --radius: 4px;
   --header-h: 72px;
 }
@@ -57,7 +57,7 @@ p { margin: 0 0 1em; }
 /* Type */
 .eyebrow { font-size: 0.74rem; font-weight: 700; letter-spacing: 0.24em; text-transform: uppercase; color: var(--glacier); margin-bottom: 18px; }
 .eyebrow.light { color: var(--glacier); }
-h2 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.1rem, 4.8vw, 3.6rem); margin-bottom: 22px; letter-spacing: -0.01em; }
+h2 { font-family: var(--serif); font-weight: 800; font-size: clamp(2rem, 4.6vw, 3.4rem); margin-bottom: 22px; letter-spacing: -0.035em; line-height: 1.04; }
 h3 { font-size: 1.5rem; font-weight: 800; }
 .lead { font-size: clamp(1.02rem, 1.4vw, 1.16rem); color: var(--mist); max-width: 60ch; }
 .center .lead, .lead.center { margin-left: auto; margin-right: auto; }
@@ -117,7 +117,7 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 .hero h1 b { font-weight: 800; }
 .hero h1 i { font-style: normal; color: var(--red); }
 .hero .rule { display: block; width: 72px; height: 3px; background: var(--red); margin: 30px 0 22px; }
-.hero-sub { font-family: var(--serif); font-style: italic; font-weight: 500; font-size: clamp(1.35rem, 3vw, 2.1rem); margin-bottom: 12px; }
+.hero-sub { font-family: var(--serif); font-weight: 500; letter-spacing: -0.02em; font-size: clamp(1.35rem, 3vw, 2.1rem); margin-bottom: 12px; }
 .hero-regions { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.85; }
 .scroll-cue { position: absolute; left: 50%; bottom: 22px; transform: translateX(-50%); color: var(--white); text-decoration: none; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.28em; text-transform: uppercase; opacity: 0.7; }
 .scroll-cue::after { content: ""; display: block; width: 1px; height: 34px; background: linear-gradient(currentColor, transparent); margin: 10px auto 0; }
@@ -151,12 +151,12 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 
 /* Intro (about) */
 .intro { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(32px, 6vw, 96px); align-items: start; }
-.intro h2 { font-size: clamp(2.4rem, 5.4vw, 4.2rem); line-height: 1.02; margin: 0; }
+.intro h2 { font-size: clamp(2.3rem, 5.2vw, 4rem); line-height: 1; margin: 0; }
 .intro .lead { max-width: none; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: clamp(56px, 7vw, 88px); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
 .stats > div { padding: 32px 28px 30px 0; }
 .stats > div + div { padding-left: 28px; border-left: 1px solid var(--line); }
-.stats strong { display: block; font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 700; letter-spacing: -0.02em; color: var(--white); line-height: 1; }
+.stats strong { display: block; font-family: var(--serif); font-size: clamp(2.4rem, 5vw, 3.8rem); font-weight: 800; letter-spacing: -0.04em; color: var(--white); line-height: 1; }
 .stats span { display: block; margin-top: 12px; color: var(--mist); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; line-height: 1.5; }
 
 /* Spots & features */
@@ -177,9 +177,9 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 .cover { display: block; box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6); border-radius: 2px; overflow: hidden; transition: transform 0.3s; }
 .cover:hover { transform: translateY(-4px); }
 .cover img { width: 100%; }
-.book-feature h3 { font-family: var(--serif); font-weight: 700; font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
+.book-feature h3 { font-family: var(--serif); font-weight: 800; letter-spacing: -0.03em; font-size: clamp(1.9rem, 3.4vw, 2.7rem); }
 .book-feature h3 small { display: block; font-family: var(--sans); font-weight: 700; font-size: 0.34em; letter-spacing: 0.24em; text-transform: uppercase; margin-top: 12px; color: var(--glacier); }
-.subtitle { font-family: var(--serif); font-style: italic; font-size: 1.25rem; color: var(--mist); margin-top: 12px; }
+.subtitle { font-family: var(--serif); font-weight: 500; font-size: 1.1rem; color: var(--mist); margin-top: 12px; }
 
 /* Journal */
 .journal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; margin-top: 52px; }
@@ -190,7 +190,7 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 .journal-card > div { padding: 0 2px 8px; margin-top: -28px; position: relative; }
 .journal-card h3 a { text-decoration: none; }
 .journal-card h3 a:hover { text-decoration: underline; text-underline-offset: 3px; }
-.journal-card h3 { font-family: var(--serif); font-size: 1.35rem; line-height: 1.22; margin: 10px 0 10px; letter-spacing: 0; }
+.journal-card h3 { font-family: var(--serif); font-weight: 700; font-size: 1.2rem; line-height: 1.25; margin: 10px 0 10px; letter-spacing: -0.02em; }
 .journal-card p { color: var(--mist); font-size: 0.92rem; margin-bottom: 12px; }
 .tags { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--glacier); }
 .soon-label { display: inline-block; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: var(--mist); border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; }
@@ -203,7 +203,7 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10, 17, 22, 0) 40%, rgba(10, 17, 22, 0.9)); }
 .card-tag { position: absolute; z-index: 1; top: 14px; left: 14px; font-size: 0.62rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 5px 10px; border-radius: 2px; background: rgba(10, 17, 22, 0.55); backdrop-filter: blur(6px); }
 .card-body { position: absolute; z-index: 1; left: 18px; right: 18px; bottom: 18px; }
-.card-body strong { display: block; font-family: var(--serif); font-size: 1.3rem; line-height: 1.15; }
+.card-body strong { display: block; font-family: var(--serif); font-weight: 800; font-size: 1.15rem; line-height: 1.15; letter-spacing: -0.02em; }
 .card-body em { display: block; font-style: normal; font-size: 0.84rem; opacity: 0.85; margin-top: 6px; }
 
 /* Map */
@@ -216,7 +216,7 @@ h3 { font-size: 1.5rem; font-weight: 800; }
 /* Books */
 .book-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); margin-top: 56px; text-align: center; }
 .book .series { margin: 24px 0 6px; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.22em; text-transform: uppercase; color: var(--glacier); }
-.book h3 { font-family: var(--serif); font-size: 1.4rem; }
+.book h3 { font-family: var(--serif); font-weight: 800; font-size: 1.3rem; letter-spacing: -0.03em; }
 .book .subtitle { margin: 8px 0 14px; font-size: 1.05rem; }
 
 /* Guides section: deep teal with a faint photo that fades at both ends */

@@ -97,7 +97,7 @@ body.article { background: var(--paper); color: var(--ink); }
 .article .a-hero .bg { -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); mask-image: linear-gradient(180deg, #000 70%, transparent 100%); }
 .article .a-hero { background: var(--paper); }
 .article .a-hero .shade { background: linear-gradient(180deg, rgba(10, 17, 22, 0.6) 0%, rgba(10, 17, 22, 0.25) 35%, rgba(10, 17, 22, 0.75) 80%, rgba(10, 17, 22, 0) 100%); }
-.article .a-hero h1 { font-family: var(--serif); font-weight: 700; letter-spacing: -0.01em; }
+.article .a-hero h1 { font-family: var(--serif); font-weight: 800; letter-spacing: -0.035em; }
 .article .a-body h2 { color: var(--ink); }
 .article .a-body a { color: var(--ink); }
 .article .stat span { color: var(--white); }

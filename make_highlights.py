@@ -37,7 +37,7 @@ PAGE_CSS = """
 .hx-hero .bg { -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 100%); mask-image: linear-gradient(180deg, #000 55%, transparent 100%); }
 .hx-hero .shade { background: linear-gradient(180deg, rgba(10, 17, 22, 0.55) 0%, rgba(10, 17, 22, 0.15) 40%, rgba(10, 17, 22, 0.55) 75%, var(--night) 100%); }
 .hx-hero .container { position: relative; padding-top: calc(var(--header-h) + 60px); padding-bottom: 40px; }
-.hx-hero h1 { font-family: var(--serif); font-weight: 700; font-size: clamp(2.6rem, 7vw, 5.2rem); letter-spacing: -0.01em; line-height: 1; }
+.hx-hero h1 { font-family: var(--serif); font-weight: 800; font-size: clamp(2.6rem, 7vw, 5.2rem); letter-spacing: -0.04em; line-height: 1; }
 .hx-hero .rule { display: block; width: 64px; height: 3px; background: var(--red); margin: 24px 0 18px; }
 .hx-hero .lead { color: rgba(255, 255, 255, 0.88); }
 
@@ -61,7 +61,7 @@ PAGE_CSS = """
 .hx-tags span { font-size: 0.6rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 5px 9px; border-radius: 2px; background: rgba(10, 17, 22, 0.55); backdrop-filter: blur(6px); color: var(--white); }
 .hx-body { padding: 18px 2px 0; }
 .hx-region { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--glacier); }
-.hx h2 { font-family: var(--serif); font-size: 1.55rem; line-height: 1.15; margin: 8px 0 10px; letter-spacing: 0; }
+.hx h2 { font-family: var(--serif); font-weight: 800; font-size: 1.4rem; line-height: 1.15; margin: 8px 0 10px; letter-spacing: -0.025em; }
 .hx p { color: var(--mist); font-size: 0.93rem; margin: 0; }
 .hx-cta { text-align: center; padding: 88px 0 100px; }
 .hx-cta h2 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); }

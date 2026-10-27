@@ -26,7 +26,7 @@ IMG = DIST / "assets" / "img"
 
 # Image slot used in index.html -> Pexels photo ID (or a file name in photos/)
 SLOTS = {
-    "hero-longtail": 16840024,
+    "hero-railay": "hero-railay.jpg",
     "strip-wat-arun": 30811254,
     "strip-tuk-tuks": 38921242,
     "strip-lagoon": 29007474,

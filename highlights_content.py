@@ -109,6 +109,10 @@ HIGHLIGHTS = [
      "photo": 18277777, "alt": "A speedboat full of passengers passing between limestone cliffs",
      "text": "Speedboat tours fit several islands into one day. Pick an operator that hands out life jackets, and avoid trips when the sea is rough."},
 
+    {"slug": "koh-khai-nai", "name": "Koh Khai Nai", "region": "Phang Nga Bay", "cats": ["islands", "beaches"],
+     "photo": "koh-khai-nai.jpg", "pos": "50% 60%", "alt": "A wooden signpost reading Koh Khai Nai on a white sand beach with beach huts behind",
+     "text": "One of the small Khai islands, about 20 minutes by speedboat off Phuket's east coast. Half-day trips stop at Khai Nui for snorkelling, then here for white sand and a swim. A small beach fee is paid on the island."},
+
     # Beaches
     {"slug": "ao-nang", "name": "Ao Nang", "region": "Krabi", "cats": ["beaches"],
      "photo": 35126213, "alt": "Rocks on a white sand beach with turquoise water in Ao Nang",

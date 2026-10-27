@@ -19,7 +19,7 @@ CATEGORIES = [
 HIGHLIGHTS = [
     # Bangkok
     {"slug": "wat-arun", "name": "Wat Arun", "region": "Bangkok", "cats": ["temples", "city"],
-     "photo": 30811254, "pos": "50% 35%", "alt": "The central spire of Wat Arun, covered in coloured porcelain, with flowers in front",
+     "photo": 30811254, "pos": "50% 12%", "alt": "The central spire of Wat Arun, covered in coloured porcelain, with flowers in front",
      "text": "The Temple of Dawn stands on the Thonburi bank of the Chao Phraya. Its central prang is covered in pieces of Chinese porcelain, and it is lit up at night."},
     {"slug": "wat-arun-river", "name": "Wat Arun from the river", "region": "Bangkok", "cats": ["temples", "boats", "city"],
      "photo": 11105012, "alt": "Wat Arun seen through the windows of a riverboat on the Chao Phraya",
